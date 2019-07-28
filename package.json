@@ -1,0 +1,19 @@
+{
+  "name": "pulsejs-live-server",
+  "version": "7.2.20",
+  "description": "Live server for internal, external chat P2P(multirol) and groups",
+  "main": "live-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulsejs-io/live-server.git"
+  },
+  "author": "Wilmer H. Muñoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pulsejs-io/live-server/issues"
+  },
+  "homepage": "https://github.com/pulsejs-io/live-server#readme"
+}
