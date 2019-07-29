@@ -4,7 +4,14 @@
   "description": "Live server for internal, external chat P2P(multirol) and groups",
   "main": "live-server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./dist",
+    "copy-package": "cp package.json dist/",
+    "start-build": "./node_modules/.bin/babel . --out-dir dist",
+    "build": "npm run clean && npm run start-build && npm run copy-package",
+    "babel-node": "babel-node ./live-server.js",
+    "dev": "nodemon --exec npm run babel-node",
+    "start": "node ./dist/live-server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,19 @@
   "bugs": {
     "url": "https://github.com/pulsejs-io/live-server/issues"
   },
-  "homepage": "https://github.com/pulsejs-io/live-server#readme"
+  "homepage": "https://github.com/pulsejs-io/live-server#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "crypto": "^1.0.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "eslintrc": "^1.0.6",
+    "nodemon": "^1.19.1"
+  }
 }
